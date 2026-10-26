@@ -1,0 +1,135 @@
+{
+  "run_id": "670990c61a004da3b550b521eb56fab8",
+  "startup": {
+    "status": "ready",
+    "timeout_sec": 60,
+    "latency_ms": 10095.97,
+    "details": {
+      "imports_ms": 4816.96,
+      "client_init_ms": 681.05,
+      "rag_init_ms": 1915.44
+    }
+  },
+  "total_latency_ms": 17678.68,
+  "answer": "Отправка в чат 12345 выполнена в учебном режиме",
+  "steps": 3,
+  "revisions": 0,
+  "usage": {
+    "prompt_tokens": 10742,
+    "completion_tokens": 136,
+    "total_tokens": 10878
+  },
+  "usage_complete": true,
+  "trace": [
+    {
+      "run_id": "670990c61a004da3b550b521eb56fab8",
+      "step": 1,
+      "tool_name": "get_current_time",
+      "tool_args": {
+        "timezone": "Europe/Moscow"
+      },
+      "tool_result": "{\"ok\": true, \"value\": \"2026-10-09T22:04:43.753431+03:00\"}",
+      "tool_latency_ms": 8.64,
+      "plan": "Получаю текущее время для отправки отметки в чат.",
+      "critic": "OK",
+      "llm_calls": [
+        {
+          "phase": "actor",
+          "model": "gpt-5.4-mini",
+          "prompt_tokens": 1901,
+          "completion_tokens": 41,
+          "total_tokens": 1942,
+          "usage_complete": true,
+          "latency_ms": 2525.15
+        },
+        {
+          "phase": "critic",
+          "model": "gpt-5.4-mini",
+          "prompt_tokens": 1475,
+          "completion_tokens": 4,
+          "total_tokens": 1479,
+          "usage_complete": true,
+          "latency_ms": 883.28
+        }
+      ],
+      "prompt_tokens": 3376,
+      "completion_tokens": 45,
+      "total_tokens": 3421,
+      "revisions": 0,
+      "latency_ms": 3417.4
+    },
+    {
+      "run_id": "670990c61a004da3b550b521eb56fab8",
+      "step": 2,
+      "tool_name": "send_telegram_message",
+      "tool_args": {
+        "chat_id": "12345",
+        "text": "2026-10-09T22:04:43.753431+03:00"
+      },
+      "tool_result": "{\"ok\": true, \"value\": \"Сообщение отправлено в 12345\"}",
+      "tool_latency_ms": 5.7,
+      "plan": "Отправляю отметку времени в указанный чат в учебном режиме.",
+      "critic": "OK",
+      "llm_calls": [
+        {
+          "phase": "actor",
+          "model": "gpt-5.4-mini",
+          "prompt_tokens": 1983,
+          "completion_tokens": 66,
+          "total_tokens": 2049,
+          "usage_complete": true,
+          "latency_ms": 1075.91
+        },
+        {
+          "phase": "critic",
+          "model": "gpt-5.4-mini",
+          "prompt_tokens": 1658,
+          "completion_tokens": 4,
+          "total_tokens": 1662,
+          "usage_complete": true,
+          "latency_ms": 797.28
+        }
+      ],
+      "prompt_tokens": 3641,
+      "completion_tokens": 70,
+      "total_tokens": 3711,
+      "revisions": 0,
+      "latency_ms": 1879.1
+    },
+    {
+      "run_id": "670990c61a004da3b550b521eb56fab8",
+      "step": 3,
+      "tool_name": null,
+      "tool_args": null,
+      "tool_result": null,
+      "tool_latency_ms": null,
+      "plan": "",
+      "critic": "OK",
+      "llm_calls": [
+        {
+          "phase": "actor",
+          "model": "gpt-5.4-mini",
+          "prompt_tokens": 2081,
+          "completion_tokens": 17,
+          "total_tokens": 2098,
+          "usage_complete": true,
+          "latency_ms": 1166.3
+        },
+        {
+          "phase": "critic",
+          "model": "gpt-5.4-mini",
+          "prompt_tokens": 1644,
+          "completion_tokens": 4,
+          "total_tokens": 1648,
+          "usage_complete": true,
+          "latency_ms": 889.92
+        }
+      ],
+      "prompt_tokens": 3725,
+      "completion_tokens": 21,
+      "total_tokens": 3746,
+      "revisions": 0,
+      "latency_ms": 2056.37
+    }
+  ]
+}

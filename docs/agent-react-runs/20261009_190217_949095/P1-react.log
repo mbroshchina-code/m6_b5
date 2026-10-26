@@ -1,0 +1,19 @@
+[startup] Началась подготовка
+[startup] Загружаются библиотеки поиска
+[startup] Библиотеки загружены: 4868.66 мс
+[startup] Создаётся клиент OpenAI
+[startup] Клиент создан: 678.16 мс
+[startup] Подключается существующий индекс
+C:\Users\m.roschina\Desktop\Эвотор\мое\Обучение\bag_assistant\app\services\rag.py:676: UserWarning: Api key is used with an insecure connection.
+  self._qdrant = QdrantClient(
+2026-10-09 22:05:08,077 - INFO - HTTP Request: GET http://127.0.0.1:6333/collections/ingest_training_bugs/exists "HTTP/1.1 200 OK"
+2026-10-09 22:05:08,089 - INFO - HTTP Request: GET http://127.0.0.1:6333/collections/ingest_training_bugs "HTTP/1.1 200 OK"
+2026-10-09 22:05:08,108 - INFO - HTTP Request: POST http://127.0.0.1:6333/collections/ingest_training_bugs/points/count "HTTP/1.1 200 OK"
+2026-10-09 22:05:08,470 - INFO - HTTP Request: GET http://127.0.0.1:6333 "HTTP/1.1 200 OK"
+2026-10-09 22:05:08,886 - INFO - HTTP Request: GET http://127.0.0.1:6333/collections/ingest_training_bugs/exists "HTTP/1.1 200 OK"
+2026-10-09 22:05:08,898 - INFO - HTTP Request: GET http://127.0.0.1:6333/collections/ingest_training_bugs "HTTP/1.1 200 OK"
+2026-10-09 22:05:09 [info     ] rag_citation_index_connected   collection=ingest_training_bugs context_top_n=5 points_count=97 reranker_enabled=False retrieval_top_k=10
+[startup] Индекс подключён: 1991.87 мс
+2026-10-09 22:05:11,787 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-09 22:05:11 [info     ] agent_react_step               completion_tokens=16 critic=None latency_ms=2116.4 llm_calls=[{'phase': 'actor', 'model': 'gpt-5.4-mini', 'prompt_tokens': 1895, 'completion_tokens': 16, 'total_tokens': 1911, 'usage_complete': True, 'latency_ms': 2116.37}] plan= prompt_tokens=1895 revisions=0 run_id=3ad021cee01e40b29b2e83728c971c4a step=1 tool_args=None tool_latency_ms=None tool_name=None tool_result=None total_tokens=1911
+2026-10-09 22:05:12 [info     ] agent_react_finished           error=None revisions=0 run_id=3ad021cee01e40b29b2e83728c971c4a startup={'status': 'ready', 'timeout_sec': 60, 'latency_ms': 10285.68, 'details': {'imports_ms': 4868.66, 'client_init_ms': 678.16, 'rag_init_ms': 1991.87}} steps=1 total_latency_ms=12613.51 usage={'prompt_tokens': 1895, 'completion_tokens': 16, 'total_tokens': 1911} usage_complete=True

@@ -1,0 +1,33 @@
+{
+  "answer": "Отправка в чат 12345 выполнена в учебном режиме",
+  "steps": 3,
+  "trace": [
+    {
+      "step": 1,
+      "tool_name": "get_current_time",
+      "tool_args": "{\"timezone\":\"Europe/Moscow\"}",
+      "tool_result": "2026-10-09T22:04:25.454236+03:00",
+      "llm_input_tokens": 1460,
+      "llm_output_tokens": 20,
+      "duration_ms": 2312.53
+    },
+    {
+      "step": 2,
+      "tool_name": "send_telegram_message",
+      "tool_args": "{\"chat_id\":\"12345\",\"text\":\"2026-10-09T22:04:25.454236+03:00\"}",
+      "tool_result": "Сообщение отправлено в 12345",
+      "llm_input_tokens": 1511,
+      "llm_output_tokens": 43,
+      "duration_ms": 1719.33
+    },
+    {
+      "step": 3,
+      "tool_name": null,
+      "tool_args": null,
+      "tool_result": "",
+      "llm_input_tokens": 1576,
+      "llm_output_tokens": 17,
+      "duration_ms": 869.51
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+agent_step {"step": 1, "tool_name": "get_current_time", "tool_args": "{\"timezone\":\"Europe/Moscow\"}", "tool_result": "2026-10-06T23:54:18.994434+03:00", "llm_input_tokens": 2621, "llm_output_tokens": 20, "duration_ms": 3241.69}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+agent_step {"step": 2, "tool_name": null, "tool_args": null, "tool_result": "", "llm_input_tokens": 2672, "llm_output_tokens": 26, "duration_ms": 1232.23}
+{
+  "answer": "Инструмента get_user_balance нет. Баланс не придумываю.\n\nПодходящих багов не найдено",
+  "steps": 2,
+  "trace": [
+    {
+      "step": 1,
+      "tool_name": "get_current_time",
+      "tool_args": "{\"timezone\":\"Europe/Moscow\"}",
+      "tool_result": "2026-10-06T23:54:18.994434+03:00",
+      "llm_input_tokens": 2621,
+      "llm_output_tokens": 20,
+      "duration_ms": 3241.69
+    },
+    {
+      "step": 2,
+      "tool_name": null,
+      "tool_args": null,
+      "tool_result": "",
+      "llm_input_tokens": 2672,
+      "llm_output_tokens": 26,
+      "duration_ms": 1232.23
+    }
+  ]
+}

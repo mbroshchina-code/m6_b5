@@ -1,0 +1,54 @@
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+C:\Users\m.roschina\Desktop\Эвотор\мое\Обучение\bag_assistant\app\services\rag.py:676: UserWarning: Api key is used with an insecure connection.
+  self._qdrant = QdrantClient(
+HTTP Request: GET http://127.0.0.1:6333/collections/ingest_training_bugs/exists "HTTP/1.1 200 OK"
+HTTP Request: GET http://127.0.0.1:6333/collections/ingest_training_bugs "HTTP/1.1 200 OK"
+HTTP Request: POST http://127.0.0.1:6333/collections/ingest_training_bugs/points/count "HTTP/1.1 200 OK"
+HTTP Request: GET http://127.0.0.1:6333 "HTTP/1.1 200 OK"
+HTTP Request: GET http://127.0.0.1:6333/collections/ingest_training_bugs/exists "HTTP/1.1 200 OK"
+HTTP Request: GET http://127.0.0.1:6333/collections/ingest_training_bugs "HTTP/1.1 200 OK"
+2026-10-07 23:58:03 [info     ] rag_citation_index_connected   collection=ingest_training_bugs context_top_n=5 points_count=97 reranker_enabled=False retrieval_top_k=10
+HTTP Request: POST http://127.0.0.1:6333/collections/ingest_training_bugs/points/count "HTTP/1.1 200 OK"
+HTTP Request: POST http://127.0.0.1:6333/collections/ingest_training_bugs/points/query "HTTP/1.1 200 OK"
+agent_step {"step": 1, "tool_name": "search_knowledge_base", "tool_args": "{\"query\":\"За подписку на КС списалась неверная сумма, с клиента удержали лишнюю оплату.\"}", "tool_result": "Баг №142: КС: Некорректная сумма списания за подписку.\nНомер бага\n142\nНазвание\nКС: Некорректная сумма списания за подписку.\nДата создания бага\n2026-06-08\nТема\nКС::Некорректное списание ДС\nСтатус\nВ раб", "llm_input_tokens": 1470, "llm_output_tokens": 39, "duration_ms": 40208.26}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[TELEGRAM → 12345] Номер: 142
+Название: КС: Некорректная сумма списания за подписку.
+Статус: В работе
+Временное решение: Отмените подписку на КС и дождитесь даты следующего списания.В дату списания оплатите и активируйте
+agent_step {"step": 2, "tool_name": "send_telegram_message", "tool_args": "{\"chat_id\":\"12345\",\"text\":\"Номер: 142\\nНазвание: КС: Некорректная сумма списания за подписку.\\nСтатус: В работе\\nВременное решение: Отмените подписку на КС и дождитесь даты следующего списания.В дату списания оплатите и активируйте\"}", "tool_result": "Сообщение отправлено в 12345", "llm_input_tokens": 1669, "llm_output_tokens": 86, "duration_ms": 1824.66}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+agent_step {"step": 3, "tool_name": null, "tool_args": null, "tool_result": "", "llm_input_tokens": 1777, "llm_output_tokens": 17, "duration_ms": 816.33}
+{
+  "answer": "Отправка в чат 12345 выполнена в учебном режиме",
+  "steps": 3,
+  "trace": [
+    {
+      "step": 1,
+      "tool_name": "search_knowledge_base",
+      "tool_args": "{\"query\":\"За подписку на КС списалась неверная сумма, с клиента удержали лишнюю оплату.\"}",
+      "tool_result": "Баг №142: КС: Некорректная сумма списания за подписку.\nНомер бага\n142\nНазвание\nКС: Некорректная сумма списания за подписку.\nДата создания бага\n2026-06-08\nТема\nКС::Некорректное списание ДС\nСтатус\nВ раб",
+      "llm_input_tokens": 1470,
+      "llm_output_tokens": 39,
+      "duration_ms": 40208.26
+    },
+    {
+      "step": 2,
+      "tool_name": "send_telegram_message",
+      "tool_args": "{\"chat_id\":\"12345\",\"text\":\"Номер: 142\\nНазвание: КС: Некорректная сумма списания за подписку.\\nСтатус: В работе\\nВременное решение: Отмените подписку на КС и дождитесь даты следующего списания.В дату списания оплатите и активируйте\"}",
+      "tool_result": "Сообщение отправлено в 12345",
+      "llm_input_tokens": 1669,
+      "llm_output_tokens": 86,
+      "duration_ms": 1824.66
+    },
+    {
+      "step": 3,
+      "tool_name": null,
+      "tool_args": null,
+      "tool_result": "",
+      "llm_input_tokens": 1777,
+      "llm_output_tokens": 17,
+      "duration_ms": 816.33
+    }
+  ]
+}

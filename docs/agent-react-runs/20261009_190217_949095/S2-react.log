@@ -1,0 +1,25 @@
+[startup] Началась подготовка
+[startup] Загружаются библиотеки поиска
+[startup] Библиотеки загружены: 4659.39 мс
+[startup] Создаётся клиент OpenAI
+[startup] Клиент создан: 671.8 мс
+[startup] Подключается существующий индекс
+C:\Users\m.roschina\Desktop\Эвотор\мое\Обучение\bag_assistant\app\services\rag.py:676: UserWarning: Api key is used with an insecure connection.
+  self._qdrant = QdrantClient(
+2026-10-09 22:03:31,414 - INFO - HTTP Request: GET http://127.0.0.1:6333/collections/ingest_training_bugs/exists "HTTP/1.1 200 OK"
+2026-10-09 22:03:31,429 - INFO - HTTP Request: GET http://127.0.0.1:6333/collections/ingest_training_bugs "HTTP/1.1 200 OK"
+2026-10-09 22:03:31,466 - INFO - HTTP Request: POST http://127.0.0.1:6333/collections/ingest_training_bugs/points/count "HTTP/1.1 200 OK"
+2026-10-09 22:03:31,753 - INFO - HTTP Request: GET http://127.0.0.1:6333 "HTTP/1.1 200 OK"
+2026-10-09 22:03:32,180 - INFO - HTTP Request: GET http://127.0.0.1:6333/collections/ingest_training_bugs/exists "HTTP/1.1 200 OK"
+2026-10-09 22:03:32,199 - INFO - HTTP Request: GET http://127.0.0.1:6333/collections/ingest_training_bugs "HTTP/1.1 200 OK"
+2026-10-09 22:03:32 [info     ] rag_citation_index_connected   collection=ingest_training_bugs context_top_n=5 points_count=97 reranker_enabled=False retrieval_top_k=10
+[startup] Индекс подключён: 1930.33 мс
+2026-10-09 22:03:35,293 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-09 22:03:35,312 - INFO - HTTP Request: POST http://127.0.0.1:6333/collections/ingest_training_bugs/points/count "HTTP/1.1 200 OK"
+2026-10-09 22:03:35,334 - INFO - HTTP Request: POST http://127.0.0.1:6333/collections/ingest_training_bugs/points/query "HTTP/1.1 200 OK"
+2026-10-09 22:03:36,244 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-09 22:03:36 [info     ] agent_react_step               completion_tokens=72 critic=OK latency_ms=3273.82 llm_calls=[{'phase': 'actor', 'model': 'gpt-5.4-mini', 'prompt_tokens': 1886, 'completion_tokens': 68, 'total_tokens': 1954, 'usage_complete': True, 'latency_ms': 2322.3}, {'phase': 'critic', 'model': 'gpt-5.4-mini', 'prompt_tokens': 1871, 'completion_tokens': 4, 'total_tokens': 1875, 'usage_complete': True, 'latency_ms': 905.34}] plan='Ищу известный баг по описанию ошибки при регистрации.' prompt_tokens=3757 revisions=0 run_id=2effb2d515034b73a71169f3ae7127da step=1 tool_args={'query': 'При регистрации в Милена ЭДО возникает ошибка «Некорректный статус регистрации. Текущий статус INS, должен быть ARED».'} tool_latency_ms=45.8 tool_name=search_knowledge_base tool_result='{"ok": true, "value": "Баг №110: ЭДО: Милена ЭДО: Ошибки при регистрации Номер бага\\n110\\n\\n\\n\\nБаг №110: ЭДО: Милена ЭДО: Ошибки при регистрации Название\\nЭДО: Милена ЭДО: Ошибки при регистрации\\n\\n\\n\\nБаг №110: ЭДО: Милена ЭДО: Ошибки при регистрации Дата создания бага\\n2025-08-18\\n\\n\\n\\nБаг №110: ЭДО: Милена ЭДО: Ошибки при регистрации Тема\\nЭДО::Начало работы::Ошибка при регистрации Милена ЭДО\\n\\n\\n\\nБаг №110: ЭДО: Милена ЭДО: Ошибки при регистрации Статус\\nЗакрыто\\n\\n\\n\\nБаг №110: ЭДО: Милена ЭДО: Ошибки при регистрации Код статуса\\nЗакрыто\\n\\n\\n\\nБаг №110: ЭДО: Милена ЭДО: Ошибки при регистрации Влияние\\nБлокирует работу с ЭДО\\n\\n\\n\\nБаг №110: ЭДО: Милена ЭДО: Ошибки при регистрации Описание\\nПри регистрации в Милена ЭДО возникает ошибка Некорректный статус регистрации. Текущий статус INS, должен быть ARED.\\n\\n\\n\\nБаг №110: ЭДО: Милена ЭДО: Ошибки при регистрации Временное решение\\nОжидать исправления"}' total_tokens=3829
+2026-10-09 22:03:37,166 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-09 22:03:38,333 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-09 22:03:38 [info     ] agent_react_step               completion_tokens=87 critic=OK latency_ms=2078.77 llm_calls=[{'phase': 'actor', 'model': 'gpt-5.4-mini', 'prompt_tokens': 2311, 'completion_tokens': 77, 'total_tokens': 2388, 'usage_complete': True, 'latency_ms': 913.63}, {'phase': 'critic', 'model': 'gpt-5.4-mini', 'prompt_tokens': 1978, 'completion_tokens': 10, 'total_tokens': 1988, 'usage_complete': True, 'latency_ms': 1164.99}] plan= prompt_tokens=4289 revisions=0 run_id=2effb2d515034b73a71169f3ae7127da step=2 tool_args=None tool_latency_ms=None tool_name=None tool_result=None total_tokens=4376
+2026-10-09 22:03:38 [info     ] agent_react_finished           error=None revisions=0 run_id=2effb2d515034b73a71169f3ae7127da startup={'status': 'ready', 'timeout_sec': 60, 'latency_ms': 10045.46, 'details': {'imports_ms': 4659.39, 'client_init_ms': 671.8, 'rag_init_ms': 1930.33}} steps=2 total_latency_ms=15633.4 usage={'prompt_tokens': 8046, 'completion_tokens': 159, 'total_tokens': 8205} usage_complete=True

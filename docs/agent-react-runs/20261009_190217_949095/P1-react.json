@@ -1,0 +1,51 @@
+{
+  "run_id": "3ad021cee01e40b29b2e83728c971c4a",
+  "startup": {
+    "status": "ready",
+    "timeout_sec": 60,
+    "latency_ms": 10285.68,
+    "details": {
+      "imports_ms": 4868.66,
+      "client_init_ms": 678.16,
+      "rag_init_ms": 1991.87
+    }
+  },
+  "total_latency_ms": 12613.51,
+  "answer": "Я помогаю искать известные баги по обращениям клиентов",
+  "steps": 1,
+  "revisions": 0,
+  "usage": {
+    "prompt_tokens": 1895,
+    "completion_tokens": 16,
+    "total_tokens": 1911
+  },
+  "usage_complete": true,
+  "trace": [
+    {
+      "run_id": "3ad021cee01e40b29b2e83728c971c4a",
+      "step": 1,
+      "tool_name": null,
+      "tool_args": null,
+      "tool_result": null,
+      "tool_latency_ms": null,
+      "plan": "",
+      "critic": null,
+      "llm_calls": [
+        {
+          "phase": "actor",
+          "model": "gpt-5.4-mini",
+          "prompt_tokens": 1895,
+          "completion_tokens": 16,
+          "total_tokens": 1911,
+          "usage_complete": true,
+          "latency_ms": 2116.37
+        }
+      ],
+      "prompt_tokens": 1895,
+      "completion_tokens": 16,
+      "total_tokens": 1911,
+      "revisions": 0,
+      "latency_ms": 2116.4
+    }
+  ]
+}

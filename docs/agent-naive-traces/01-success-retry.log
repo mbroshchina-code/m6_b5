@@ -1,0 +1,86 @@
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+C:\Users\m.roschina\Desktop\Эвотор\мое\Обучение\bag_assistant\app\services\rag.py:676: UserWarning: Api key is used with an insecure connection.
+  self._qdrant = QdrantClient(
+HTTP Request: GET http://127.0.0.1:6333/collections/ingest_training_bugs/exists "HTTP/1.1 200 OK"
+HTTP Request: GET http://127.0.0.1:6333/collections/ingest_training_bugs "HTTP/1.1 200 OK"
+HTTP Request: POST http://127.0.0.1:6333/collections/ingest_training_bugs/points/count "HTTP/1.1 200 OK"
+HTTP Request: GET http://127.0.0.1:6333 "HTTP/1.1 200 OK"
+HTTP Request: GET http://127.0.0.1:6333/collections/ingest_training_bugs/exists "HTTP/1.1 200 OK"
+HTTP Request: GET http://127.0.0.1:6333/collections/ingest_training_bugs "HTTP/1.1 200 OK"
+2026-10-06 23:01:30 [info     ] rag_citation_index_connected   collection=ingest_training_bugs context_top_n=5 points_count=97 reranker_enabled=False retrieval_top_k=10
+HTTP Request: POST http://127.0.0.1:6333/collections/ingest_training_bugs/points/count "HTTP/1.1 200 OK"
+embedding_provider_call provider=openai model=text-embedding-3-small texts=1
+HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+HTTP Request: POST http://127.0.0.1:6333/collections/ingest_training_bugs/points/query "HTTP/1.1 200 OK"
+agent_step {"step": 1, "tool_name": "search_knowledge_base", "tool_args": "{\"query\":\"Невозможно продавать товар, очень долго грузит марки\"}", "tool_result": "Баг №139: Продать табак: Неверный тип товара\nНомер бага\n139\nНазвание\nПродать табак: Неверный тип товара\nДата создания бага\n2024-09-02\nТема\nМРК::Продажа/возврат::Ошибка при продаже товаров\nСтатус\nЗакры", "llm_input_tokens": 2237, "llm_output_tokens": 30, "duration_ms": 47676.46}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST http://127.0.0.1:6333/collections/ingest_training_bugs/points/count "HTTP/1.1 200 OK"
+embedding_provider_call provider=openai model=text-embedding-3-small texts=1
+HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+HTTP Request: POST http://127.0.0.1:6333/collections/ingest_training_bugs/points/query "HTTP/1.1 200 OK"
+agent_step {"step": 2, "tool_name": "search_knowledge_base", "tool_args": "{\"query\":\"очень долго грузит марки продажа товара маркированный товар\"}", "tool_result": "Настроить проверку. 1.1. В МСЕ 1.2. В ТМ 2. Добавить в чек маркированный товар. Результат:Наблюдается долгая проверка кода маркировки (в некоторых случаях до минуты). При обращении запросить ger 2.6.1", "llm_input_tokens": 2443, "llm_output_tokens": 31, "duration_ms": 2915.96}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST http://127.0.0.1:6333/collections/ingest_training_bugs/points/count "HTTP/1.1 200 OK"
+embedding_provider_call provider=openai model=text-embedding-3-small texts=1
+HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+HTTP Request: POST http://127.0.0.1:6333/collections/ingest_training_bugs/points/query "HTTP/1.1 200 OK"
+agent_step {"step": 3, "tool_name": "search_knowledge_base", "tool_args": "{\"query\":\"долгая проверка кода маркировки при продаже товара\"}", "tool_result": "Настроить проверку. 1.1. В МСЕ 1.2. В ТМ 2. Добавить в чек маркированный товар. Результат:Наблюдается долгая проверка кода маркировки (в некоторых случаях до минуты). При обращении запросить ger 2.6.1", "llm_input_tokens": 2631, "llm_output_tokens": 32, "duration_ms": 1550.07}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[TELEGRAM → 12345] Найденный баг:
+**114** — МРК: Долгая проверка КМ при онлайн/офлайн проверке
+Статус: Не указан
+Временное решение: Временное решение в последнем комментарии описания проблемы
+agent_step {"step": 4, "tool_name": "send_telegram_message", "tool_args": "{\"chat_id\":\"12345\",\"text\":\"Найденный баг:\\n**114** — МРК: Долгая проверка КМ при онлайн/офлайн проверке\\nСтатус: Не указан\\nВременное решение: Временное решение в последнем комментарии описания проблемы\"}", "tool_result": "Сообщение отправлено в 12345", "llm_input_tokens": 2820, "llm_output_tokens": 79, "duration_ms": 1885.7}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+agent_step {"step": 5, "tool_name": null, "tool_args": null, "tool_result": "", "llm_input_tokens": 2921, "llm_output_tokens": 80, "duration_ms": 1221.47}
+{
+  "answer": "Релевантные баги\n\n*   **114** — МРК: Долгая проверка КМ при онлайн/офлайн проверке\n    *   *Статус:* Не указан\n    *   *Причина:* Не указано\n    *   *Временное решение:* Временное решение в последнем комментарии описания проблемы",
+  "steps": 5,
+  "trace": [
+    {
+      "step": 1,
+      "tool_name": "search_knowledge_base",
+      "tool_args": "{\"query\":\"Невозможно продавать товар, очень долго грузит марки\"}",
+      "tool_result": "Баг №139: Продать табак: Неверный тип товара\nНомер бага\n139\nНазвание\nПродать табак: Неверный тип товара\nДата создания бага\n2024-09-02\nТема\nМРК::Продажа/возврат::Ошибка при продаже товаров\nСтатус\nЗакры",
+      "llm_input_tokens": 2237,
+      "llm_output_tokens": 30,
+      "duration_ms": 47676.46
+    },
+    {
+      "step": 2,
+      "tool_name": "search_knowledge_base",
+      "tool_args": "{\"query\":\"очень долго грузит марки продажа товара маркированный товар\"}",
+      "tool_result": "Настроить проверку. 1.1. В МСЕ 1.2. В ТМ 2. Добавить в чек маркированный товар. Результат:Наблюдается долгая проверка кода маркировки (в некоторых случаях до минуты). При обращении запросить ger 2.6.1",
+      "llm_input_tokens": 2443,
+      "llm_output_tokens": 31,
+      "duration_ms": 2915.96
+    },
+    {
+      "step": 3,
+      "tool_name": "search_knowledge_base",
+      "tool_args": "{\"query\":\"долгая проверка кода маркировки при продаже товара\"}",
+      "tool_result": "Настроить проверку. 1.1. В МСЕ 1.2. В ТМ 2. Добавить в чек маркированный товар. Результат:Наблюдается долгая проверка кода маркировки (в некоторых случаях до минуты). При обращении запросить ger 2.6.1",
+      "llm_input_tokens": 2631,
+      "llm_output_tokens": 32,
+      "duration_ms": 1550.07
+    },
+    {
+      "step": 4,
+      "tool_name": "send_telegram_message",
+      "tool_args": "{\"chat_id\":\"12345\",\"text\":\"Найденный баг:\\n**114** — МРК: Долгая проверка КМ при онлайн/офлайн проверке\\nСтатус: Не указан\\nВременное решение: Временное решение в последнем комментарии описания проблемы\"}",
+      "tool_result": "Сообщение отправлено в 12345",
+      "llm_input_tokens": 2820,
+      "llm_output_tokens": 79,
+      "duration_ms": 1885.7
+    },
+    {
+      "step": 5,
+      "tool_name": null,
+      "tool_args": null,
+      "tool_result": "",
+      "llm_input_tokens": 2921,
+      "llm_output_tokens": 80,
+      "duration_ms": 1221.47
+    }
+  ]
+}

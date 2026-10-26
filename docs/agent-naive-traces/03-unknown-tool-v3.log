@@ -1,0 +1,39 @@
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+C:\Users\m.roschina\Desktop\Эвотор\мое\Обучение\bag_assistant\app\services\rag.py:676: UserWarning: Api key is used with an insecure connection.
+  self._qdrant = QdrantClient(
+HTTP Request: GET http://127.0.0.1:6333/collections/ingest_training_bugs/exists "HTTP/1.1 200 OK"
+HTTP Request: GET http://127.0.0.1:6333/collections/ingest_training_bugs "HTTP/1.1 200 OK"
+HTTP Request: POST http://127.0.0.1:6333/collections/ingest_training_bugs/points/count "HTTP/1.1 200 OK"
+HTTP Request: GET http://127.0.0.1:6333 "HTTP/1.1 200 OK"
+HTTP Request: GET http://127.0.0.1:6333/collections/ingest_training_bugs/exists "HTTP/1.1 200 OK"
+HTTP Request: GET http://127.0.0.1:6333/collections/ingest_training_bugs "HTTP/1.1 200 OK"
+2026-10-07 22:47:40 [info     ] rag_citation_index_connected   collection=ingest_training_bugs context_top_n=5 points_count=97 reranker_enabled=False retrieval_top_k=10
+HTTP Request: POST http://127.0.0.1:6333/collections/ingest_training_bugs/points/count "HTTP/1.1 200 OK"
+HTTP Request: POST http://127.0.0.1:6333/collections/ingest_training_bugs/points/query "HTTP/1.1 200 OK"
+agent_step {"step": 1, "tool_name": "search_knowledge_base", "tool_args": "{\"query\":\"Клиент жалуется на списание при ошибке кассы.\"}", "tool_result": "Баг №142: КС: Некорректная сумма списания за подписку.\nНомер бага\n142\nНазвание\nКС: Некорректная сумма списания за подписку.\nДата создания бага\n2026-06-08\nТема\nКС::Некорректное списание ДС\nСтатус\nВ раб", "llm_input_tokens": 1164, "llm_output_tokens": 59, "duration_ms": 60854.53}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+agent_step {"step": 2, "tool_name": null, "tool_args": null, "tool_result": "", "llm_input_tokens": 1350, "llm_output_tokens": 86, "duration_ms": 2722.44}
+{
+  "answer": "Недоступные действия:\n- Инструмент `get_user_balance` недоступен.\n\nРелевантные баги\n* **142** — КС: Некорректная сумма списания за подписку.\n    * Статус: В работе\n    * Причина: КС::Некорректное списание ДС\n    * Временное решение: Не указано",
+  "steps": 2,
+  "trace": [
+    {
+      "step": 1,
+      "tool_name": "search_knowledge_base",
+      "tool_args": "{\"query\":\"Клиент жалуется на списание при ошибке кассы.\"}",
+      "tool_result": "Баг №142: КС: Некорректная сумма списания за подписку.\nНомер бага\n142\nНазвание\nКС: Некорректная сумма списания за подписку.\nДата создания бага\n2026-06-08\nТема\nКС::Некорректное списание ДС\nСтатус\nВ раб",
+      "llm_input_tokens": 1164,
+      "llm_output_tokens": 59,
+      "duration_ms": 60854.53
+    },
+    {
+      "step": 2,
+      "tool_name": null,
+      "tool_args": null,
+      "tool_result": "",
+      "llm_input_tokens": 1350,
+      "llm_output_tokens": 86,
+      "duration_ms": 2722.44
+    }
+  ]
+}

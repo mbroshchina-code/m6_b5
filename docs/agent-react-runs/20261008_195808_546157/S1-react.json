@@ -1,0 +1,43 @@
+{
+  "run_id": "383937da7c964422b208e52ae4b57c68",
+  "answer": "Timeout",
+  "steps": 1,
+  "revisions": 0,
+  "usage": {
+    "prompt_tokens": 1885,
+    "completion_tokens": 71,
+    "total_tokens": 1956
+  },
+  "usage_complete": true,
+  "trace": [
+    {
+      "run_id": "383937da7c964422b208e52ae4b57c68",
+      "step": 1,
+      "tool_name": "search_knowledge_base",
+      "tool_args": {
+        "query": "При продаже на чеке появляется уведомление «Чек аннулирован», но после этого чек успешно фискализируется и печатается."
+      },
+      "tool_result": null,
+      "plan": "Ищу баг по описанию клиента, чтобы сопоставить симптом с базой.",
+      "critic": null,
+      "llm_calls": [
+        {
+          "phase": "actor",
+          "model": "gpt-5.4-mini",
+          "prompt_tokens": 1885,
+          "completion_tokens": 71,
+          "total_tokens": 1956,
+          "usage_complete": true,
+          "latency_ms": 8324.86
+        }
+      ],
+      "error": "timeout",
+      "prompt_tokens": 1885,
+      "completion_tokens": 71,
+      "total_tokens": 1956,
+      "revisions": 0,
+      "latency_ms": 15011.13
+    }
+  ],
+  "error": "timeout"
+}

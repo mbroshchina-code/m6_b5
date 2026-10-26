@@ -1,0 +1,29 @@
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[TELEGRAM → 12345] Обращение об ошибке печати чека принято.
+agent_step {"step": 1, "tool_name": "send_telegram_message", "tool_args": "{\"chat_id\":\"12345\",\"text\":\"Обращение об ошибке печати чека принято.\"}", "tool_result": "Сообщение отправлено в 12345", "llm_input_tokens": 994, "llm_output_tokens": 36, "duration_ms": 4280.92}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+agent_step {"step": 2, "tool_name": null, "tool_args": null, "tool_result": "", "llm_input_tokens": 1052, "llm_output_tokens": 17, "duration_ms": 651.07}
+{
+  "answer": "Отправка в чат 12345 выполнена в учебном режиме",
+  "steps": 2,
+  "trace": [
+    {
+      "step": 1,
+      "tool_name": "send_telegram_message",
+      "tool_args": "{\"chat_id\":\"12345\",\"text\":\"Обращение об ошибке печати чека принято.\"}",
+      "tool_result": "Сообщение отправлено в 12345",
+      "llm_input_tokens": 994,
+      "llm_output_tokens": 36,
+      "duration_ms": 4280.92
+    },
+    {
+      "step": 2,
+      "tool_name": null,
+      "tool_args": null,
+      "tool_result": "",
+      "llm_input_tokens": 1052,
+      "llm_output_tokens": 17,
+      "duration_ms": 651.07
+    }
+  ]
+}

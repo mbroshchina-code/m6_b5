@@ -1,0 +1,95 @@
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+C:\Users\m.roschina\Desktop\Эвотор\мое\Обучение\bag_assistant\app\services\rag.py:676: UserWarning: Api key is used with an insecure connection.
+  self._qdrant = QdrantClient(
+HTTP Request: GET http://127.0.0.1:6333/collections/ingest_training_bugs/exists "HTTP/1.1 200 OK"
+HTTP Request: GET http://127.0.0.1:6333/collections/ingest_training_bugs "HTTP/1.1 200 OK"
+HTTP Request: POST http://127.0.0.1:6333/collections/ingest_training_bugs/points/count "HTTP/1.1 200 OK"
+HTTP Request: GET http://127.0.0.1:6333 "HTTP/1.1 200 OK"
+HTTP Request: GET http://127.0.0.1:6333/collections/ingest_training_bugs/exists "HTTP/1.1 200 OK"
+HTTP Request: GET http://127.0.0.1:6333/collections/ingest_training_bugs "HTTP/1.1 200 OK"
+2026-10-07 00:13:53 [info     ] rag_citation_index_connected   collection=ingest_training_bugs context_top_n=5 points_count=97 reranker_enabled=False retrieval_top_k=10
+HTTP Request: POST http://127.0.0.1:6333/collections/ingest_training_bugs/points/count "HTTP/1.1 200 OK"
+HTTP Request: POST http://127.0.0.1:6333/collections/ingest_training_bugs/points/query "HTTP/1.1 200 OK"
+agent_step {"step": 1, "tool_name": "search_knowledge_base", "tool_args": "{\"query\":\"зависание перед печатью чека\"}", "tool_result": "После ошибки успешно фискализируется и печатается чек продажи.\n\n\n\nБаг №112: БС::Уведомление на чеке: Чек аннулирован, но потом чек успешно фискализируется Временное решение\nУведомление Чек аннулирован", "llm_input_tokens": 1090, "llm_output_tokens": 27, "duration_ms": 80188.96}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+agent_step {"step": 2, "tool_name": "get_current_time", "tool_args": "{\"timezone\":\"Europe/Moscow\"}", "tool_result": "2026-10-07T00:13:54.676815+03:00", "llm_input_tokens": 1209, "llm_output_tokens": 20, "duration_ms": 1571.3}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[TELEGRAM → 12345] Релевантные баги
+* **112** — БС::Уведомление на чеке: Чек аннулирован, но потом чек успешно фискализируется
+    * Статус: Не указано
+    * Причина: Не указано
+    * Временное решение: Уведомление Чек аннулирован в данной ситуации является только визуальным сообщением. Пока можно не обращать внимание на это уведомление.
+Время Europe/Moscow: 2026-10-07T00:13:54.676815+03:00
+agent_step {"step": 3, "tool_name": "send_telegram_message", "tool_args": "{\"chat_id\":\"12345\",\"text\":\"Релевантные баги\\n* **112** — БС::Уведомление на чеке: Чек аннулирован, но потом чек успешно фискализируется\\n    * Статус: Не указано\\n    * Причина: Не указано\\n    * Временное решение: Уведомление Чек аннулирован в данной ситуации является только визуальным сообщением. Пока можно не обращать внимание на это уведомление.\\nВремя Europe/Moscow: 2026-10-07T00:13:54.676815+03:00\"}", "tool_result": "Сообщение отправлено в 12345", "llm_input_tokens": 1260, "llm_output_tokens": 146, "duration_ms": 1159.99}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST http://127.0.0.1:6333/collections/ingest_training_bugs/points/count "HTTP/1.1 200 OK"
+HTTP Request: POST http://127.0.0.1:6333/collections/ingest_training_bugs/points/query "HTTP/1.1 200 OK"
+agent_step {"step": 4, "tool_name": "search_knowledge_base", "tool_args": "{\"query\":\"повторного списания\"}", "tool_result": "Временное решение\nпередать на ТП2.ТП2:проверяем его версию по алгоритму выше, для обновления должна быть\nдоступна только версия 8.1, в ином случае просим снять версию выше через чат обновлений. После\n", "llm_input_tokens": 1428, "llm_output_tokens": 23, "duration_ms": 1200.35}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+agent_step {"step": 5, "tool_name": "get_current_time", "tool_args": "{\"timezone\":\"Asia/Vladivostok\"}", "tool_result": "2026-10-07T07:13:57.716623+10:00", "llm_input_tokens": 1544, "llm_output_tokens": 23, "duration_ms": 673.08}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[TELEGRAM → 12345] Релевантные баги
+Подходящих багов не найдено
+Время Asia/Vladivostok: 2026-10-07T07:13:57.716623+10:00
+agent_step {"step": 6, "tool_name": "send_telegram_message", "tool_args": "{\"chat_id\":\"12345\",\"text\":\"Релевантные баги\\nПодходящих багов не найдено\\nВремя Asia/Vladivostok: 2026-10-07T07:13:57.716623+10:00\"}", "tool_result": "Сообщение отправлено в 12345", "llm_input_tokens": 1598, "llm_output_tokens": 70, "duration_ms": 1059.21}
+{
+  "answer": "Достигнут лимит шагов",
+  "steps": 6,
+  "trace": [
+    {
+      "step": 1,
+      "tool_name": "search_knowledge_base",
+      "tool_args": "{\"query\":\"зависание перед печатью чека\"}",
+      "tool_result": "После ошибки успешно фискализируется и печатается чек продажи.\n\n\n\nБаг №112: БС::Уведомление на чеке: Чек аннулирован, но потом чек успешно фискализируется Временное решение\nУведомление Чек аннулирован",
+      "llm_input_tokens": 1090,
+      "llm_output_tokens": 27,
+      "duration_ms": 80188.96
+    },
+    {
+      "step": 2,
+      "tool_name": "get_current_time",
+      "tool_args": "{\"timezone\":\"Europe/Moscow\"}",
+      "tool_result": "2026-10-07T00:13:54.676815+03:00",
+      "llm_input_tokens": 1209,
+      "llm_output_tokens": 20,
+      "duration_ms": 1571.3
+    },
+    {
+      "step": 3,
+      "tool_name": "send_telegram_message",
+      "tool_args": "{\"chat_id\":\"12345\",\"text\":\"Релевантные баги\\n* **112** — БС::Уведомление на чеке: Чек аннулирован, но потом чек успешно фискализируется\\n    * Статус: Не указано\\n    * Причина: Не указано\\n    * Временное решение: Уведомление Чек аннулирован в данной ситуации является только визуальным сообщением. Пока можно не обращать внимание на это уведомление.\\nВремя Europe/Moscow: 2026-10-07T00:13:54.676815+03:00\"}",
+      "tool_result": "Сообщение отправлено в 12345",
+      "llm_input_tokens": 1260,
+      "llm_output_tokens": 146,
+      "duration_ms": 1159.99
+    },
+    {
+      "step": 4,
+      "tool_name": "search_knowledge_base",
+      "tool_args": "{\"query\":\"повторного списания\"}",
+      "tool_result": "Временное решение\nпередать на ТП2.ТП2:проверяем его версию по алгоритму выше, для обновления должна быть\nдоступна только версия 8.1, в ином случае просим снять версию выше через чат обновлений. После\n",
+      "llm_input_tokens": 1428,
+      "llm_output_tokens": 23,
+      "duration_ms": 1200.35
+    },
+    {
+      "step": 5,
+      "tool_name": "get_current_time",
+      "tool_args": "{\"timezone\":\"Asia/Vladivostok\"}",
+      "tool_result": "2026-10-07T07:13:57.716623+10:00",
+      "llm_input_tokens": 1544,
+      "llm_output_tokens": 23,
+      "duration_ms": 673.08
+    },
+    {
+      "step": 6,
+      "tool_name": "send_telegram_message",
+      "tool_args": "{\"chat_id\":\"12345\",\"text\":\"Релевантные баги\\nПодходящих багов не найдено\\nВремя Asia/Vladivostok: 2026-10-07T07:13:57.716623+10:00\"}",
+      "tool_result": "Сообщение отправлено в 12345",
+      "llm_input_tokens": 1598,
+      "llm_output_tokens": 70,
+      "duration_ms": 1059.21
+    }
+  ],
+  "error": "max_steps"
+}

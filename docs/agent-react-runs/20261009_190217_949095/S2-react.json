@@ -1,0 +1,97 @@
+{
+  "run_id": "2effb2d515034b73a71169f3ae7127da",
+  "startup": {
+    "status": "ready",
+    "timeout_sec": 60,
+    "latency_ms": 10045.46,
+    "details": {
+      "imports_ms": 4659.39,
+      "client_init_ms": 671.8,
+      "rag_init_ms": 1930.33
+    }
+  },
+  "total_latency_ms": 15633.4,
+  "answer": "Релевантные баги\n* **110** — ЭДО: Милена ЭДО: Ошибки при регистрации\n    * Статус: Закрыто\n    * Причина: ЭДО::Начало работы::Ошибка при регистрации Милена ЭДО\n    * Временное решение: Ожидать исправления",
+  "steps": 2,
+  "revisions": 0,
+  "usage": {
+    "prompt_tokens": 8046,
+    "completion_tokens": 159,
+    "total_tokens": 8205
+  },
+  "usage_complete": true,
+  "trace": [
+    {
+      "run_id": "2effb2d515034b73a71169f3ae7127da",
+      "step": 1,
+      "tool_name": "search_knowledge_base",
+      "tool_args": {
+        "query": "При регистрации в Милена ЭДО возникает ошибка «Некорректный статус регистрации. Текущий статус INS, должен быть ARED»."
+      },
+      "tool_result": "{\"ok\": true, \"value\": \"Баг №110: ЭДО: Милена ЭДО: Ошибки при регистрации Номер бага\\n110\\n\\n\\n\\nБаг №110: ЭДО: Милена ЭДО: Ошибки при регистрации Название\\nЭДО: Милена ЭДО: Ошибки при регистрации\\n\\n\\n\\nБаг №110: ЭДО: Милена ЭДО: Ошибки при регистрации Дата создания бага\\n2025-08-18\\n\\n\\n\\nБаг №110: ЭДО: Милена ЭДО: Ошибки при регистрации Тема\\nЭДО::Начало работы::Ошибка при регистрации Милена ЭДО\\n\\n\\n\\nБаг №110: ЭДО: Милена ЭДО: Ошибки при регистрации Статус\\nЗакрыто\\n\\n\\n\\nБаг №110: ЭДО: Милена ЭДО: Ошибки при регистрации Код статуса\\nЗакрыто\\n\\n\\n\\nБаг №110: ЭДО: Милена ЭДО: Ошибки при регистрации Влияние\\nБлокирует работу с ЭДО\\n\\n\\n\\nБаг №110: ЭДО: Милена ЭДО: Ошибки при регистрации Описание\\nПри регистрации в Милена ЭДО возникает ошибка Некорректный статус регистрации. Текущий статус INS, должен быть ARED.\\n\\n\\n\\nБаг №110: ЭДО: Милена ЭДО: Ошибки при регистрации Временное решение\\nОжидать исправления\"}",
+      "tool_latency_ms": 45.8,
+      "plan": "Ищу известный баг по описанию ошибки при регистрации.",
+      "critic": "OK",
+      "llm_calls": [
+        {
+          "phase": "actor",
+          "model": "gpt-5.4-mini",
+          "prompt_tokens": 1886,
+          "completion_tokens": 68,
+          "total_tokens": 1954,
+          "usage_complete": true,
+          "latency_ms": 2322.3
+        },
+        {
+          "phase": "critic",
+          "model": "gpt-5.4-mini",
+          "prompt_tokens": 1871,
+          "completion_tokens": 4,
+          "total_tokens": 1875,
+          "usage_complete": true,
+          "latency_ms": 905.34
+        }
+      ],
+      "prompt_tokens": 3757,
+      "completion_tokens": 72,
+      "total_tokens": 3829,
+      "revisions": 0,
+      "latency_ms": 3273.82
+    },
+    {
+      "run_id": "2effb2d515034b73a71169f3ae7127da",
+      "step": 2,
+      "tool_name": null,
+      "tool_args": null,
+      "tool_result": null,
+      "tool_latency_ms": null,
+      "plan": "",
+      "critic": "OK",
+      "llm_calls": [
+        {
+          "phase": "actor",
+          "model": "gpt-5.4-mini",
+          "prompt_tokens": 2311,
+          "completion_tokens": 77,
+          "total_tokens": 2388,
+          "usage_complete": true,
+          "latency_ms": 913.63
+        },
+        {
+          "phase": "critic",
+          "model": "gpt-5.4-mini",
+          "prompt_tokens": 1978,
+          "completion_tokens": 10,
+          "total_tokens": 1988,
+          "usage_complete": true,
+          "latency_ms": 1164.99
+        }
+      ],
+      "prompt_tokens": 4289,
+      "completion_tokens": 87,
+      "total_tokens": 4376,
+      "revisions": 0,
+      "latency_ms": 2078.77
+    }
+  ]
+}

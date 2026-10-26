@@ -1,0 +1,34 @@
+{
+  "started_utc": "2026-10-08T19:58:08.546157+00:00",
+  "openai_version": "2.45.0",
+  "collection": "ingest_training_bugs",
+  "rag_score_threshold": 0.3,
+  "retrieval_top_k": 10,
+  "files_before": {
+    "app/services/agent_naive.py": "37652c34c9b71df4ba70a67561b8e21b54023a299ae6d3df21a1be0e6045a98f",
+    "app/services/agent_naive_prompt.py": "260a19fe41d9ebb9fc484ec0c689973abf5ede00051fb7c6e4de39a6909017d0",
+    "app/services/agent_naive_tools.py": "46a233be539482f915d770279a2fa39cfb0d06c2fd4745f9117270dda5ede7d1",
+    "app/services/agent_react.py": "9c6d71c1695415422332cb0c381f5377e4e4ca1468be545777bcc96617b855d3",
+    "app/services/agent_react_tools.py": "b5e45c5f176c44345b38375409e242dca2976823521e2ba08a0eaf5b9dc142d1",
+    "app/services/agent_react_runtime.py": "32a2562478cd564946dac48276bff96e53e0c571d442238fe5b8322d65fecbf5",
+    "app/services/rag.py": "1aba47dd483a67aa9f95a28e67564cb02cdc2f0b01d8d07268aca78579c8ac6e",
+    "data/training_bugs/bug_112.md": "349525c64ffab7b5e09b4e6ee320e5a85208b670d6ed482859be4b655ea6190c",
+    "data/training_bugs/bug_110.md": "69d77f302a40e38aeae426ea4dda30794d0cfe79f95ca717616f7a121454a03c",
+    "tests/eval/agent_react_tasks.json": "5818e3e7c9f9d35fdb23114ac8f73ba615f38d3a6e86efc30916a2ec9b49f0b2",
+    "scripts/compare_agents.py": "4c84a25ddadc696dc722f67cc3e13c568bcbf76d40db7f438bca3674034f5e90"
+  },
+  "finished_utc": "2026-10-08T20:00:06.281080+00:00",
+  "files_after": {
+    "app/services/agent_naive.py": "37652c34c9b71df4ba70a67561b8e21b54023a299ae6d3df21a1be0e6045a98f",
+    "app/services/agent_naive_prompt.py": "260a19fe41d9ebb9fc484ec0c689973abf5ede00051fb7c6e4de39a6909017d0",
+    "app/services/agent_naive_tools.py": "46a233be539482f915d770279a2fa39cfb0d06c2fd4745f9117270dda5ede7d1",
+    "app/services/agent_react.py": "9c6d71c1695415422332cb0c381f5377e4e4ca1468be545777bcc96617b855d3",
+    "app/services/agent_react_tools.py": "b5e45c5f176c44345b38375409e242dca2976823521e2ba08a0eaf5b9dc142d1",
+    "app/services/agent_react_runtime.py": "32a2562478cd564946dac48276bff96e53e0c571d442238fe5b8322d65fecbf5",
+    "app/services/rag.py": "1aba47dd483a67aa9f95a28e67564cb02cdc2f0b01d8d07268aca78579c8ac6e",
+    "data/training_bugs/bug_112.md": "349525c64ffab7b5e09b4e6ee320e5a85208b670d6ed482859be4b655ea6190c",
+    "data/training_bugs/bug_110.md": "69d77f302a40e38aeae426ea4dda30794d0cfe79f95ca717616f7a121454a03c",
+    "tests/eval/agent_react_tasks.json": "5818e3e7c9f9d35fdb23114ac8f73ba615f38d3a6e86efc30916a2ec9b49f0b2",
+    "scripts/compare_agents.py": "4c84a25ddadc696dc722f67cc3e13c568bcbf76d40db7f438bca3674034f5e90"
+  }
+}

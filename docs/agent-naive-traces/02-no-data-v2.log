@@ -1,0 +1,56 @@
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+C:\Users\m.roschina\Desktop\Эвотор\мое\Обучение\bag_assistant\app\services\rag.py:676: UserWarning: Api key is used with an insecure connection.
+  self._qdrant = QdrantClient(
+HTTP Request: GET http://127.0.0.1:6333/collections/ingest_training_bugs/exists "HTTP/1.1 200 OK"
+HTTP Request: GET http://127.0.0.1:6333/collections/ingest_training_bugs "HTTP/1.1 200 OK"
+HTTP Request: POST http://127.0.0.1:6333/collections/ingest_training_bugs/points/count "HTTP/1.1 200 OK"
+HTTP Request: GET http://127.0.0.1:6333 "HTTP/1.1 200 OK"
+HTTP Request: GET http://127.0.0.1:6333/collections/ingest_training_bugs/exists "HTTP/1.1 200 OK"
+HTTP Request: GET http://127.0.0.1:6333/collections/ingest_training_bugs "HTTP/1.1 200 OK"
+2026-10-07 00:04:37 [info     ] rag_citation_index_connected   collection=ingest_training_bugs context_top_n=5 points_count=97 reranker_enabled=False retrieval_top_k=10
+HTTP Request: POST http://127.0.0.1:6333/collections/ingest_training_bugs/points/count "HTTP/1.1 200 OK"
+embedding_provider_call provider=openai model=text-embedding-3-small texts=1
+HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+HTTP Request: POST http://127.0.0.1:6333/collections/ingest_training_bugs/points/query "HTTP/1.1 200 OK"
+agent_step {"step": 1, "tool_name": "search_knowledge_base", "tool_args": "{\"query\":\"Касса телепортирует чеки на Юпитер через модуль JUPITER-VOID-000.\"}", "tool_result": "Статус защиты в разделе Платежная система с P=2 переходит в\nP=4. Необходимо проверить, был ли ранее активирован эквайринг.Если эквайринг ранее не был\nактивирован, кейс не относится к багу.\nВременное р", "llm_input_tokens": 1004, "llm_output_tokens": 42, "duration_ms": 86806.6}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST http://127.0.0.1:6333/collections/ingest_training_bugs/points/count "HTTP/1.1 200 OK"
+embedding_provider_call provider=openai model=text-embedding-3-small texts=1
+HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+HTTP Request: POST http://127.0.0.1:6333/collections/ingest_training_bugs/points/query "HTTP/1.1 200 OK"
+agent_step {"step": 2, "tool_name": "search_knowledge_base", "tool_args": "{\"query\":\"Касса телепортирует чеки на Юпитер через модуль JUPITER-VOID-000. Касса чеки на Юпитер.\"}", "tool_result": "Статус защиты в разделе Платежная система с P=2 переходит в\nP=4. Необходимо проверить, был ли ранее активирован эквайринг.Если эквайринг ранее не был\nактивирован, кейс не относится к багу.\nВременное р", "llm_input_tokens": 1135, "llm_output_tokens": 52, "duration_ms": 1571.07}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+agent_step {"step": 3, "tool_name": null, "tool_args": null, "tool_result": "", "llm_input_tokens": 1276, "llm_output_tokens": 11, "duration_ms": 1278.78}
+{
+  "answer": "Подходящих багов не найдено",
+  "steps": 3,
+  "trace": [
+    {
+      "step": 1,
+      "tool_name": "search_knowledge_base",
+      "tool_args": "{\"query\":\"Касса телепортирует чеки на Юпитер через модуль JUPITER-VOID-000.\"}",
+      "tool_result": "Статус защиты в разделе Платежная система с P=2 переходит в\nP=4. Необходимо проверить, был ли ранее активирован эквайринг.Если эквайринг ранее не был\nактивирован, кейс не относится к багу.\nВременное р",
+      "llm_input_tokens": 1004,
+      "llm_output_tokens": 42,
+      "duration_ms": 86806.6
+    },
+    {
+      "step": 2,
+      "tool_name": "search_knowledge_base",
+      "tool_args": "{\"query\":\"Касса телепортирует чеки на Юпитер через модуль JUPITER-VOID-000. Касса чеки на Юпитер.\"}",
+      "tool_result": "Статус защиты в разделе Платежная система с P=2 переходит в\nP=4. Необходимо проверить, был ли ранее активирован эквайринг.Если эквайринг ранее не был\nактивирован, кейс не относится к багу.\nВременное р",
+      "llm_input_tokens": 1135,
+      "llm_output_tokens": 52,
+      "duration_ms": 1571.07
+    },
+    {
+      "step": 3,
+      "tool_name": null,
+      "tool_args": null,
+      "tool_result": "",
+      "llm_input_tokens": 1276,
+      "llm_output_tokens": 11,
+      "duration_ms": 1278.78
+    }
+  ]
+}
