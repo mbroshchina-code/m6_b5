@@ -1,0 +1,12 @@
+{
+  "thread_id": "operator-workaround-restart",
+  "input": {
+    "request_id": "case-005",
+    "messages": [
+      {
+        "role": "user",
+        "content": "На другой кассе тоже"
+      }
+    ]
+  }
+}

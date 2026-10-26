@@ -1,0 +1,13 @@
+{
+  "thread_id": "operator-workaround-reject-1",
+  "input": {
+    "request_id": "reject-001",
+    "messages": [
+      {
+        "role": "user",
+        "content": "На оплаченной и активной сим Лучи не работает интернет."
+      }
+    ],
+    "send_to": "435626013"
+  }
+}

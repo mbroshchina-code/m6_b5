@@ -1,0 +1,7 @@
+{
+  "thread_id": "operator-workaround-restart",
+  "interrupt_id": "afc9258ebc905b5672bc35670e74e6e2",
+  "resume": {
+    "bug_id": "101"
+  }
+}

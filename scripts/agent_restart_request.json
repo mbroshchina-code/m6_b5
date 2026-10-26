@@ -1,0 +1,13 @@
+{
+  "thread_id": "operator-workaround-restart",
+  "input": {
+    "request_id": "case-004",
+    "messages": [
+      {
+        "role": "user",
+        "content": "На оплаченной и активной сим Лучи не работает интернет."
+      }
+    ],
+    "send_to": "435626013"
+  }
+}

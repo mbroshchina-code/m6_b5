@@ -1,0 +1,13 @@
+{
+  "thread_id": "operator-check-less-relevant-1",
+  "input": {
+    "request_id": "less-relevant-001",
+    "messages": [
+      {
+        "role": "user",
+        "content": "симкарта Лучи"
+      }
+    ],
+    "send_to": "435626013"
+  }
+}

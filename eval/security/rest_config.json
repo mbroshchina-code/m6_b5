@@ -1,0 +1,25 @@
+{
+  "rest": {
+    "req": {
+      "url": "http://127.0.0",
+      "method": "POST",
+      "headers": {
+        "Content-Type": "application/json",
+        "Authorization": "Bearer $GARAK_BEARER_TOKEN"
+      },
+      "req_template_json_object": {
+        "messages": [
+          {
+            "role": "user",
+            "content": "$INPUT"
+          }
+        ],
+        "model": "gpt-4o-mini",
+        "temperature": 0.7
+      }
+    },
+    "resp": {
+      "response_json_field": "content"
+    }
+  }
+}
