@@ -1,0 +1,25 @@
+{
+  "task_id": "P1",
+  "implementation": "prebuilt",
+  "repeat": 1,
+  "answer": "Подходящих багов не найдено",
+  "error": null,
+  "llm_calls": [
+    {
+      "phase": "actor",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "prompt_tokens": 3064,
+      "completion_tokens": 11,
+      "total_tokens": 3075
+    }
+  ],
+  "tool_results": [],
+  "revisions": 0,
+  "prompt_tokens": 3064,
+  "completion_tokens": 11,
+  "total_tokens": 3075,
+  "usage_complete": true,
+  "total_steps": 1,
+  "tool_error": false,
+  "latency_ms": 10841.17
+}
