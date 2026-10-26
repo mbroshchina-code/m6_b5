@@ -1,0 +1,20 @@
+---
+config:
+  flowchart:
+    curve: linear
+---
+graph TD;
+	__start__([<p>__start__</p>]):::first
+	call_model(call_model)
+	execute_tool(execute_tool)
+	force_finish(force_finish)
+	__end__([<p>__end__</p>]):::last
+	__start__ --> call_model;
+	call_model -.-> execute_tool;
+	call_model -.-> force_finish;
+	execute_tool --> call_model;
+	force_finish --> __end__;
+	classDef default fill:#f2f0ff,line-height:1.2
+	classDef first fill-opacity:0
+	classDef last fill:#bfb6fc
+

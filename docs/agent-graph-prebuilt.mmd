@@ -1,0 +1,24 @@
+---
+config:
+  flowchart:
+    curve: linear
+---
+graph TD;
+	__start__([<p>__start__</p>]):::first
+	model(model)
+	tools(tools)
+	review_prebuilt_observation\2ebefore_model(review_prebuilt_observation.before_model)
+	track_prebuilt_step\2eafter_model(track_prebuilt_step.after_model)
+	__end__([<p>__end__</p>]):::last
+	__start__ --> review_prebuilt_observation\2ebefore_model;
+	model --> track_prebuilt_step\2eafter_model;
+	review_prebuilt_observation\2ebefore_model -.-> __end__;
+	review_prebuilt_observation\2ebefore_model -.-> model;
+	tools -.-> review_prebuilt_observation\2ebefore_model;
+	track_prebuilt_step\2eafter_model -.-> __end__;
+	track_prebuilt_step\2eafter_model -.-> review_prebuilt_observation\2ebefore_model;
+	track_prebuilt_step\2eafter_model -.-> tools;
+	classDef default fill:#f2f0ff,line-height:1.2
+	classDef first fill-opacity:0
+	classDef last fill:#bfb6fc
+

@@ -1,0 +1,184 @@
+[startup] Началась подготовка
+[startup] Загружаются библиотеки поиска
+Timeout (0:00:20)!
+Thread 0x0000117c (most recent call first):
+  File "<frozen ntpath>", line 754 in realpath
+  File "C:\Users\m.roschina\AppData\Local\Programs\Python\Python312\Lib\inspect.py", line 1016 in getmodule
+  File "C:\Users\m.roschina\AppData\Local\Programs\Python\Python312\Lib\inspect.py", line 1090 in findsource
+  File "C:\Users\m.roschina\AppData\Local\Programs\Python\Python312\Lib\inspect.py", line 1718 in getframeinfo
+  File "C:\Users\m.roschina\Desktop\\u042d\u0432\u043e\u0442\u043e\u0440\\u043c\u043e\u0435\\u041e\u0431\u0443\u0447\u0435\u043d\u0438\u0435\bag_assistant\.venv\Lib\site-packages\torch\_library\utils.py", line 45 in get_source
+  File "C:\Users\m.roschina\Desktop\\u042d\u0432\u043e\u0442\u043e\u0440\\u043c\u043e\u0435\\u041e\u0431\u0443\u0447\u0435\u043d\u0438\u0435\bag_assistant\.venv\Lib\site-packages\torch\library.py", line 333 in _register_fake
+  File "C:\Users\m.roschina\Desktop\\u042d\u0432\u043e\u0442\u043e\u0440\\u043c\u043e\u0435\\u041e\u0431\u0443\u0447\u0435\u043d\u0438\u0435\bag_assistant\.venv\Lib\site-packages\torch\library.py", line 1271 in register
+  File "C:\Users\m.roschina\Desktop\\u042d\u0432\u043e\u0442\u043e\u0440\\u043c\u043e\u0435\\u041e\u0431\u0443\u0447\u0435\u043d\u0438\u0435\bag_assistant\.venv\Lib\site-packages\torch\fx\experimental\proxy_tensor.py", line 1226 in <module>
+  File "<frozen importlib._bootstrap>", line 488 in _call_with_frames_removed
+  File "<frozen importlib._bootstrap_external>", line 999 in exec_module
+  File "<frozen importlib._bootstrap>", line 935 in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1331 in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1360 in _find_and_load
+  File "C:\Users\m.roschina\Desktop\\u042d\u0432\u043e\u0442\u043e\u0440\\u043c\u043e\u0435\\u041e\u0431\u0443\u0447\u0435\u043d\u0438\u0435\bag_assistant\.venv\Lib\site-packages\torch\fx\passes\runtime_assert.py", line 23 in <module>
+  File "<frozen importlib._bootstrap>", line 488 in _call_with_frames_removed
+  File "<frozen importlib._bootstrap_external>", line 999 in exec_module
+  File "<frozen importlib._bootstrap>", line 935 in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1331 in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1360 in _find_and_load
+  File "<frozen importlib._bootstrap>", line 488 in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1415 in _handle_fromlist
+  File "C:\Users\m.roschina\Desktop\\u042d\u0432\u043e\u0442\u043e\u0440\\u043c\u043e\u0435\\u041e\u0431\u0443\u0447\u0435\u043d\u0438\u0435\bag_assistant\.venv\Lib\site-packages\torch\fx\passes\__init__.py", line 1 in <module>
+  File "<frozen importlib._bootstrap>", line 488 in _call_with_frames_removed
+  File "<frozen importlib._bootstrap_external>", line 999 in exec_module
+  File "<frozen importlib._bootstrap>", line 935 in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1331 in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1360 in _find_and_load
+  File "<frozen importlib._bootstrap>", line 488 in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1310 in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1360 in _find_and_load
+  File "<frozen importlib._bootstrap>", line 488 in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1310 in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1360 in _find_and_load
+  File "C:\Users\m.roschina\Desktop\\u042d\u0432\u043e\u0442\u043e\u0440\\u043c\u043e\u0435\\u041e\u0431\u0443\u0447\u0435\u043d\u0438\u0435\bag_assistant\.venv\Lib\site-packages\torch\export\__init__.py", line 11 in <module>
+  File "<frozen importlib._bootstrap>", line 488 in _call_with_frames_removed
+  File "<frozen importlib._bootstrap_external>", line 999 in exec_module
+  File "<frozen importlib._bootstrap>", line 935 in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1331 in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1360 in _find_and_load
+  File "<frozen importlib._bootstrap>", line 488 in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1415 in _handle_fromlist
+  File "C:\Users\m.roschina\Desktop\\u042d\u0432\u043e\u0442\u043e\u0440\\u043c\u043e\u0435\\u041e\u0431\u0443\u0447\u0435\u043d\u0438\u0435\bag_assistant\.venv\Lib\site-packages\torch\__init__.py", line 3312 in <module>
+  File "<frozen importlib._bootstrap>", line 488 in _call_with_frames_removed
+  File "<frozen importlib._bootstrap_external>", line 999 in exec_module
+  File "<frozen importlib._bootstrap>", line 935 in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1331 in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1360 in _find_and_load
+  File "C:\Users\m.roschina\Desktop\\u042d\u0432\u043e\u0442\u043e\u0440\\u043c\u043e\u0435\\u041e\u0431\u0443\u0447\u0435\u043d\u0438\u0435\bag_assistant\.venv\Lib\site-packages\transformers\generation\logits_process.py", line 21 in <module>
+  File "<frozen importlib._bootstrap>", line 488 in _call_with_frames_removed
+  File "<frozen importlib._bootstrap_external>", line 999 in exec_module
+  File "<frozen importlib._bootstrap>", line 935 in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1331 in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1360 in _find_and_load
+  File "C:\Users\m.roschina\Desktop\\u042d\u0432\u043e\u0442\u043e\u0440\\u043c\u043e\u0435\\u041e\u0431\u0443\u0447\u0435\u043d\u0438\u0435\bag_assistant\.venv\Lib\site-packages\transformers\generation\configuration_utils.py", line 62 in <module>
+  File "<frozen importlib._bootstrap>", line 488 in _call_with_frames_removed
+  File "<frozen importlib._bootstrap_external>", line 999 in exec_module
+  File "<frozen importlib._bootstrap>", line 935 in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1331 in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1360 in _find_and_load
+  File "C:\Users\m.roschina\Desktop\\u042d\u0432\u043e\u0442\u043e\u0440\\u043c\u043e\u0435\\u041e\u0431\u0443\u0447\u0435\u043d\u0438\u0435\bag_assistant\.venv\Lib\site-packages\transformers\configuration_utils.py", line 32 in <module>
+  File "<frozen importlib._bootstrap>", line 488 in _call_with_frames_removed
+  File "<frozen importlib._bootstrap_external>", line 999 in exec_module
+  File "<frozen importlib._bootstrap>", line 935 in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1331 in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1360 in _find_and_load
+  File "C:\Users\m.roschina\Desktop\\u042d\u0432\u043e\u0442\u043e\u0440\\u043c\u043e\u0435\\u041e\u0431\u0443\u0447\u0435\u043d\u0438\u0435\bag_assistant\.venv\Lib\site-packages\sentence_transformers\backend\load.py", line 7 in <module>
+  File "<frozen importlib._bootstrap>", line 488 in _call_with_frames_removed
+  File "<frozen importlib._bootstrap_external>", line 999 in exec_module
+  File "<frozen importlib._bootstrap>", line 935 in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1331 in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1360 in _find_and_load
+  File "C:\Users\m.roschina\Desktop\\u042d\u0432\u043e\u0442\u043e\u0440\\u043c\u043e\u0435\\u041e\u0431\u0443\u0447\u0435\u043d\u0438\u0435\bag_assistant\.venv\Lib\site-packages\sentence_transformers\backend\__init__.py", line 3 in <module>
+  File "<frozen importlib._bootstrap>", line 488 in _call_with_frames_removed
+  File "<frozen importlib._bootstrap_external>", line 999 in exec_module
+  File "<frozen importlib._bootstrap>", line 935 in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1331 in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1360 in _find_and_load
+  File "C:\Users\m.roschina\Desktop\\u042d\u0432\u043e\u0442\u043e\u0440\\u043c\u043e\u0435\\u041e\u0431\u0443\u0447\u0435\u043d\u0438\u0435\bag_assistant\.venv\Lib\site-packages\sentence_transformers\__init__.py", line 10 in <module>
+  File "<frozen importlib._bootstrap>", line 488 in _call_with_frames_removed
+  File "<frozen importlib._bootstrap_external>", line 999 in exec_module
+  File "<frozen importlib._bootstrap>", line 935 in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1331 in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1360 in _find_and_load
+  File "C:\Users\m.roschina\Desktop\\u042d\u0432\u043e\u0442\u043e\u0440\\u043c\u043e\u0435\\u041e\u0431\u0443\u0447\u0435\u043d\u0438\u0435\bag_assistant\app\services\embeddings.py", line 26 in <module>
+  File "<frozen importlib._bootstrap>", line 488 in _call_with_frames_removed
+  File "<frozen importlib._bootstrap_external>", line 999 in exec_module
+  File "<frozen importlib._bootstrap>", line 935 in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1331 in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1360 in _find_and_load
+  File "C:\Users\m.roschina\Desktop\\u042d\u0432\u043e\u0442\u043e\u0440\\u043c\u043e\u0435\\u041e\u0431\u0443\u0447\u0435\u043d\u0438\u0435\bag_assistant\app\services\rag.py", line 32 in <module>
+  File "<frozen importlib._bootstrap>", line 488 in _call_with_frames_removed
+  File "<frozen importlib._bootstrap_external>", line 999 in exec_module
+  File "<frozen importlib._bootstrap>", line 935 in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1331 in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1360 in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1387 in _gcd_import
+  File "C:\Users\m.roschina\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py", line 90 in import_module
+  File "C:\Users\m.roschina\Desktop\\u042d\u0432\u043e\u0442\u043e\u0440\\u043c\u043e\u0435\\u041e\u0431\u0443\u0447\u0435\u043d\u0438\u0435\bag_assistant\app\services\agent_react_runtime.py", line 38 in _serve
+  File "C:\Users\m.roschina\AppData\Local\Programs\Python\Python312\Lib\multiprocessing\process.py", line 108 in run
+  File "C:\Users\m.roschina\AppData\Local\Programs\Python\Python312\Lib\multiprocessing\process.py", line 314 in _bootstrap
+  ...
+Timeout (0:00:20)!
+Thread 0x0000117c (most recent call first):
+  File "<frozen importlib._bootstrap_external>", line 1190 in get_data
+  File "<frozen importlib._bootstrap_external>", line 1091 in get_code
+  File "<frozen importlib._bootstrap_external>", line 995 in exec_module
+  File "<frozen importlib._bootstrap>", line 935 in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1331 in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1360 in _find_and_load
+  File "C:\Users\m.roschina\Desktop\\u042d\u0432\u043e\u0442\u043e\u0440\\u043c\u043e\u0435\\u041e\u0431\u0443\u0447\u0435\u043d\u0438\u0435\bag_assistant\.venv\Lib\site-packages\transformers\loss\loss_utils.py", line 21 in <module>
+  File "<frozen importlib._bootstrap>", line 488 in _call_with_frames_removed
+  File "<frozen importlib._bootstrap_external>", line 999 in exec_module
+  File "<frozen importlib._bootstrap>", line 935 in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1331 in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1360 in _find_and_load
+  File "C:\Users\m.roschina\Desktop\\u042d\u0432\u043e\u0442\u043e\u0440\\u043c\u043e\u0435\\u041e\u0431\u0443\u0447\u0435\u043d\u0438\u0435\bag_assistant\.venv\Lib\site-packages\transformers\modeling_utils.py", line 89 in <module>
+  File "<frozen importlib._bootstrap>", line 488 in _call_with_frames_removed
+  File "<frozen importlib._bootstrap_external>", line 999 in exec_module
+  File "<frozen importlib._bootstrap>", line 935 in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1331 in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1360 in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1387 in _gcd_import
+  File "C:\Users\m.roschina\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py", line 90 in import_module
+  File "C:\Users\m.roschina\Desktop\\u042d\u0432\u043e\u0442\u043e\u0440\\u043c\u043e\u0435\\u041e\u0431\u0443\u0447\u0435\u043d\u0438\u0435\bag_assistant\.venv\Lib\site-packages\transformers\utils\import_utils.py", line 2792 in _get_module
+  File "C:\Users\m.roschina\Desktop\\u042d\u0432\u043e\u0442\u043e\u0440\\u043c\u043e\u0435\\u041e\u0431\u0443\u0447\u0435\u043d\u0438\u0435\bag_assistant\.venv\Lib\site-packages\transformers\utils\import_utils.py", line 2560 in __getattr__
+  File "<frozen importlib._bootstrap>", line 1412 in _handle_fromlist
+  File "C:\Users\m.roschina\Desktop\\u042d\u0432\u043e\u0442\u043e\u0440\\u043c\u043e\u0435\\u041e\u0431\u0443\u0447\u0435\u043d\u0438\u0435\bag_assistant\.venv\Lib\site-packages\sentence_transformers\base\model.py", line 30 in <module>
+  File "<frozen importlib._bootstrap>", line 488 in _call_with_frames_removed
+  File "<frozen importlib._bootstrap_external>", line 999 in exec_module
+  File "<frozen importlib._bootstrap>", line 935 in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1331 in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1360 in _find_and_load
+  File "C:\Users\m.roschina\Desktop\\u042d\u0432\u043e\u0442\u043e\u0440\\u043c\u043e\u0435\\u041e\u0431\u0443\u0447\u0435\u043d\u0438\u0435\bag_assistant\.venv\Lib\site-packages\sentence_transformers\base\__init__.py", line 4 in <module>
+  File "<frozen importlib._bootstrap>", line 488 in _call_with_frames_removed
+  File "<frozen importlib._bootstrap_external>", line 999 in exec_module
+  File "<frozen importlib._bootstrap>", line 935 in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1331 in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1360 in _find_and_load
+  File "<frozen importlib._bootstrap>", line 488 in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1310 in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1360 in _find_and_load
+  File "C:\Users\m.roschina\Desktop\\u042d\u0432\u043e\u0442\u043e\u0440\\u043c\u043e\u0435\\u041e\u0431\u0443\u0447\u0435\u043d\u0438\u0435\bag_assistant\.venv\Lib\site-packages\sentence_transformers\__init__.py", line 15 in <module>
+  File "<frozen importlib._bootstrap>", line 488 in _call_with_frames_removed
+  File "<frozen importlib._bootstrap_external>", line 999 in exec_module
+  File "<frozen importlib._bootstrap>", line 935 in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1331 in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1360 in _find_and_load
+  File "C:\Users\m.roschina\Desktop\\u042d\u0432\u043e\u0442\u043e\u0440\\u043c\u043e\u0435\\u041e\u0431\u0443\u0447\u0435\u043d\u0438\u0435\bag_assistant\app\services\embeddings.py", line 26 in <module>
+  File "<frozen importlib._bootstrap>", line 488 in _call_with_frames_removed
+  File "<frozen importlib._bootstrap_external>", line 999 in exec_module
+  File "<frozen importlib._bootstrap>", line 935 in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1331 in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1360 in _find_and_load
+  File "C:\Users\m.roschina\Desktop\\u042d\u0432\u043e\u0442\u043e\u0440\\u043c\u043e\u0435\\u041e\u0431\u0443\u0447\u0435\u043d\u0438\u0435\bag_assistant\app\services\rag.py", line 32 in <module>
+  File "<frozen importlib._bootstrap>", line 488 in _call_with_frames_removed
+  File "<frozen importlib._bootstrap_external>", line 999 in exec_module
+  File "<frozen importlib._bootstrap>", line 935 in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1331 in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1360 in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1387 in _gcd_import
+  File "C:\Users\m.roschina\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py", line 90 in import_module
+  File "C:\Users\m.roschina\Desktop\\u042d\u0432\u043e\u0442\u043e\u0440\\u043c\u043e\u0435\\u041e\u0431\u0443\u0447\u0435\u043d\u0438\u0435\bag_assistant\app\services\agent_react_runtime.py", line 38 in _serve
+  File "C:\Users\m.roschina\AppData\Local\Programs\Python\Python312\Lib\multiprocessing\process.py", line 108 in run
+  File "C:\Users\m.roschina\AppData\Local\Programs\Python\Python312\Lib\multiprocessing\process.py", line 314 in _bootstrap
+  File "C:\Users\m.roschina\AppData\Local\Programs\Python\Python312\Lib\multiprocessing\spawn.py", line 135 in _main
+  File "C:\Users\m.roschina\AppData\Local\Programs\Python\Python312\Lib\multiprocessing\spawn.py", line 122 in spawn_main
+  File "<string>", line 1 in <module>
+[startup] Библиотеки загружены: 42013.86 мс
+[startup] Создаётся клиент OpenAI
+[startup] Клиент создан: 1199.64 мс
+{
+  "status": "ready",
+  "timeout_sec": 60,
+  "latency_ms": 46563.73,
+  "details": {
+    "imports_ms": 42013.86,
+    "client_init_ms": 1199.64
+  }
+}
+OK: подготовка завершена; поиск, LLM и эмбеддинги не вызывались.

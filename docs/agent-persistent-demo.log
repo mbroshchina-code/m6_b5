@@ -1,0 +1,28 @@
+
+SCENARIO: reject
+SELECT __interrupt__: {"type": "select_workaround", "options": [{"bug_id": "900001", "name": "Демонстрационный баг 900001", "solution": "Выполнить демонстрационное действие А."}, {"bug_id": "900002", "name": "Демонстрационный баг 900002", "solution": "Выполнить демонстрационное действие Б.\nСохранить результат."}]}
+APPROVE __interrupt__: {"type": "approve_send_workaround", "bug_id": "900002", "action_id": "e5012f6b40140432eacd02fc65016ed170cbb905a663d10956bfbe48b11cc067", "preview": {"chat_id": "123456789", "text": "Выполнить демонстрационное действие Б.\nСохранить результат."}}
+checkpoint_id | next
+1f1d0804-2c13-67fc-8006-3f6528d77412 | ('confirm_and_execute_send',)
+1f1d0804-2c11-6079-8005-0dc8a3c4aeff | ('prepare_send',)
+1f1d0804-2b7e-67fc-8004-65e0d68e2ee9 | ('choose_workaround',)
+1f1d0804-2b59-6e70-8003-2cf31c42ba06 | ('prepare_options',)
+1f1d0804-2b52-691d-8002-a141c14873a0 | ('force_finish',)
+REPLAY: ('confirm_and_execute_send',)
+RESULT: False rejected 900002
+PAST: draft = {'chat_id': '123456789', 'text': 'Выполнить демонстрационное действие Б.\nСохранить результат.'} sent = False next = ('confirm_and_execute_send',)
+
+SCENARIO: approve
+SELECT __interrupt__: {"type": "select_workaround", "options": [{"bug_id": "900001", "name": "Демонстрационный баг 900001", "solution": "Выполнить демонстрационное действие А."}, {"bug_id": "900002", "name": "Демонстрационный баг 900002", "solution": "Выполнить демонстрационное действие Б.\nСохранить результат."}]}
+APPROVE __interrupt__: {"type": "approve_send_workaround", "bug_id": "900002", "action_id": "2dadc1914cbc89e2831d47a2de799d044aa8fd37879585662c682a8f455c82aa", "preview": {"chat_id": "123456789", "text": "Выполнить демонстрационное действие Б.\nСохранить результат."}}
+checkpoint_id | next
+1f1d0804-2dc8-6d08-8006-f1576511dbd4 | ('confirm_and_execute_send',)
+1f1d0804-2dc3-6ee6-8005-6ee7b3587cde | ('prepare_send',)
+1f1d0804-2d49-6d00-8004-51638fa297a9 | ('choose_workaround',)
+1f1d0804-2d40-616d-8003-0475f29b1988 | ('prepare_options',)
+1f1d0804-2d38-6b57-8002-614a84151ce4 | ('force_finish',)
+RESULT: True sent 900002
+PAST: draft = {'chat_id': '123456789', 'text': 'Выполнить демонстрационное действие Б.\nСохранить результат.'} sent = False next = ('confirm_and_execute_send',)
+
+External API calls: 0
+Mock received only the original solution of bug 900002.
